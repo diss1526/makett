@@ -1,0 +1,295 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: url("https://png.pngtree.com/background/20210714/original/pngtree-merry-christmas-background-picture-image_1233463.jpg")
+    no-repeat;
+  background-size: contain;
+  /* overflow:inherit; */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 1000px;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: 5.5rem 1.5rem 5.5rem 1.5rem 5.5rem 1.5rem 5.5rem;
+  font-size: 5rem;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 200px;
+  color: rgb(45, 197, 37);
+}
+
+#h2 {
+  font-size: 20px;
+  position: absolute;
+  margin-bottom: 120px;
+}
+
+.timer__item {
+  position: relative;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: #424242;
+}
+
+#snowCanvas {
+  z-index: -1;
+  top: -50;
+}
+
+.header {
+  /* background:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(171,39,39,1) 0%, rgb(255, 254, 254) 100%); */
+  height: 50px;
+  align-items: center;
+  /* flex-direction: column; */
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s;
+  position: static;
+}
+
+.header-changed {
+  height: 90px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 100%;
+  transform: translateY(-1000px);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(171, 39, 39, 1) 0%,
+    rgba(189, 55, 83, 1) 100%
+  ) !important;
+
+  transition: 0.1s all;
+}
+
+.header-animation {
+  transform: translateY(0vh) !important;
+}
+
+/* .header-animation::before{ */
+/* position: fixed; */
+/* } */
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+canvas {
+  display: block;
+}
+
+h2 {
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  /* background-color: rgba(255,255,255,0.5); */
+  border-radius: 50%;
+  margin-top: 20px;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  color: white;
+}
+
+#logo {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 80px;
+  position: relative;
+  height: 80px;
+}
+
+.container {
+  border: 1px solid black;
+  width: 300px;
+  height: 450px;
+  text-align: center;
+}
+
+/* .container:hover{
+  background: rgba(255, 255, 255, 0.5);
+  scale: 1.09;
+  transition: all 0.5s;
+  position:relative;
+} */
+
+.images {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+section {
+  width: 100%;
+  z-index: 1;
+  background: white;
+  padding: 10px;
+  align-items: baseline;
+  /* background-color:palegreen; */
+}
+
+.bigcontainer {
+  justify-content: space-between;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
+section h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.buttoncard {
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(171, 39, 39, 1) 0%,
+    rgba(189, 55, 83, 1) 100%
+  ) !important;
+  height: 200px;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 100px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.footer-content {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+}
+.signs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+.signs img {
+  width: 50px;
+}
+
+.footer-links {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  /* text-decoration: underline; */
+  transition: 0.5s all;
+  scale: 1.5;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+.h22 {
+  color: black;
+}
+
+.bigcon {
+  margin-top: 100px;
+  gap: 20px;
+  justify-content: space-between;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
+.star {
+  width: 150px;
+  /* align-items: center; */
+  margin-left: 45%;
+}
+
+.forletter {
+  margin-top: 100px;
+  /* border: 1px solid black; */
+  background: url("https://img.freepik.com/premium-photo/diwali-wishes-sister-anime-scenery-wallpaper-10-commandments-christianity_905683-268320.jpg");
+  width: 800px;
+
+  height: 400px;
+  margin-left: 20%;
+  border-radius: 60px;
+}
+
+input {
+  align-items: center;
+  margin-left: 20%;
+  font-size: 20px;
+}
+
+.letter {
+  font-family: monospace;
+  font-size: 25px;
+}
